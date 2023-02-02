@@ -12,7 +12,7 @@ class Student:
 
     @property
     def schoolinfo(self):
-        return '{} {}'.format(self.student_id, self.student_class)
+        return '{}{}'.format(self.student_id, self.student_class)
 
     def __repr__(self):
-        return "Student('{}', '{}', '{}')".format(self.first_name.self.last_name, self.student_class)
+        return "Student ('{}', '{}'), '{}'".format(self.first_name, self.last_name, self.student_class)
