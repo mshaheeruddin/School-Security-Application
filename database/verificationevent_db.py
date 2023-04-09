@@ -6,16 +6,15 @@ conn = db.connect('student.db')
 c = conn.cursor()
 
 
-# c.execute(""" CREATE TABLE student (
-#   id INTEGER PRIMARY KEY AUTOINCREMENT,
-#   first_name TEXT NOT NULL,
-#   last_name TEXT NOT NULL,
-#   student_class TEXT NOT NULL,
-#   student_id TEXT UNIQUE NOT NULL,
-#   parent_id INTEGER NOT NULL,
-#   FOREIGN KEY (parent_id) REFERENCES parent (id)
-#   FOREIGN KEY (first_name) REFERENCES parent (student_name)
-# )  """)
+c.execute(""" CREATE TABLE verificationevent (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  date TEXT NOT NULL,
+  time TEXT NOT NULL,
+  student_id TEXT UNIQUE NOT NULL,
+  parent_id INTEGER NOT NULL,
+  FOREIGN KEY (parent_id) REFERENCES parent (id)
+  FOREIGN KEY (first_name) REFERENCES parent (student_name)
+)  """)
 
 #Instances of class
 
@@ -34,4 +33,3 @@ print(c.fetchall())
 conn.commit()
 
 conn.close()
-

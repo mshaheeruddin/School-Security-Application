@@ -9,7 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QDialog
 
+from frontend import WelcomeScreen as ws
 
 class Ui_SVA(object):
     def setupUi(self, SVA):
@@ -46,6 +48,7 @@ class Ui_SVA(object):
         self.pushButton = QtWidgets.QPushButton(SVA)
         self.pushButton.setGeometry(QtCore.QRect(210, 270, 111, 31))
         self.pushButton.setObjectName("pushButton")
+
 
         self.retranslateUi(SVA)
         QtCore.QMetaObject.connectSlotsByName(SVA)
