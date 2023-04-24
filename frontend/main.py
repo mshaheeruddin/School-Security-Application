@@ -26,6 +26,7 @@ class VerificationWindow(QDialog, Ui_Verification):
         self.nextButton.clicked.connect(self.display_color)
         self.nextButton.clicked.connect(self.display_name)
         self.cancelButton.clicked.connect(self.verify_card)
+
     def verify_card(self):
         if(qr.qrscan() == True):
             self.color = "green"
